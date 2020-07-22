@@ -1,3 +1,4 @@
+// html
 <template>
     <div class="card">
         <h1>test one: {{test1}}</h1>
@@ -5,6 +6,7 @@
     </div>
 </template>
 
+//js
 <script>
 export default {
   name: 'Card',
@@ -15,6 +17,7 @@ export default {
 }
 </script>
 
+//css
 <style scoped>
 
 h1{
