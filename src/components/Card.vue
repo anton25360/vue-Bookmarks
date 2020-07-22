@@ -1,8 +1,7 @@
 // html
 <template>
     <div class="card">
-        <h1>test one: {{test1}}</h1>
-        <h1>test two: {{test2}}</h1>
+        <h1>{{name}}</h1>
     </div>
 </template>
 
@@ -11,8 +10,7 @@
 export default {
   name: 'Card',
   props: {
-    test1: String,
-    test2: String
+    name: String
   }
 }
 </script>
@@ -21,6 +19,16 @@ export default {
 <style scoped>
 
 h1{
-    color: aqua;
+    /* color: red; */
+    /* border: 2px solid violet; */
+    display: inline;
 }
+
+.card{
+  border: 2px solid black; 
+  display: inline-block;
+  padding: 20px;
+  border-radius: 5px;
+}
+
 </style>

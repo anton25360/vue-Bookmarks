@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Card test1='lol' test2='ruby'/>
+    <Card name='amazon prime'/>
+    <Card name='amazon prime22a'/>
+    <Card name='amazon prime3'/>
+    <Card name='amazon prime4'/>
   </div>
 </template>
 
