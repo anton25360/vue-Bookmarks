@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Card name='amazon prime'/>
-    <Card name='amazon prime22a'/>
-    <Card name='amazon prime3'/>
-    <Card name='amazon prime4'/>
+    <Card name='Netflix'/>
+    <Card name='Prime Video'/>
+    <Card name='PLEX'/>
+    <Card name='Quibi'/>
   </div>
 </template>
 
