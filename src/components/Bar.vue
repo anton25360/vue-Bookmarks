@@ -1,7 +1,7 @@
 <template>
     <div class="appBar">
         <h1>Watchon</h1>
-        <button>help</button>
+        <button id="infoButton">info</button>
     </div>
 </template>
 
@@ -9,6 +9,12 @@
 export default {
   name: 'Bar'
 }
+
+function logThis() {
+    console.log('hello console');
+}
+
+document.getElementById('infoButton').onclick = logThis();
 </script>
 
 //css
@@ -16,6 +22,18 @@ export default {
 
 .appBar{
   border: 2px solid blue; 
+  background-color: black;
+}
+
+h1{
+    border: 2px solid black;
+    display: inline;
+    color: white;
+}
+
+button{
+    border: 2px solid black;
+    float: right;
 }
 
 </style>
