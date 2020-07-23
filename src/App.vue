@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Bar/>
     <img alt="Vue logo" src="./assets/logo.png">
     <Card name='Netflix'/>
     <Card name='Prime Video'/>
@@ -10,11 +11,13 @@
 
 <script>
 import Card from './components/Card.vue'
+import Bar from './components/Bar.vue'
 
 export default {
   name: 'App',
   components: {
-    Card
+    Card,
+    Bar
   }
 }
 </script>
@@ -24,8 +27,10 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  border: 6px solid red;
+  padding: 0;
+  margin: 0;
 }
 </style>
