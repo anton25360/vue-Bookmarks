@@ -1,39 +1,30 @@
 <template>
-    <div class="appBar">
-        <h1>Watchon</h1>
-        <button id="infoButton">info</button>
-    </div>
+  <div class="appBar">
+    <h1>WatchOn</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Bar'
-}
-
-function logThis() {
-    console.log('hello console');
-}
-
-document.getElementById('infoButton').onclick = logThis();
+  name: "Bar",
+};
 </script>
 
 //css
 <style scoped>
-
-.appBar{
-  border: 2px solid blue; 
+.appBar {
+  border: 2px solid blue;
   background-color: black;
 }
 
-h1{
-    border: 2px solid black;
-    display: inline;
-    color: white;
+h1 {
+  border: 2px solid black;
+  display: inline;
+  color: white;
 }
 
-button{
-    border: 2px solid black;
-    float: right;
+button {
+  border: 2px solid black;
+  float: right;
 }
-
 </style>

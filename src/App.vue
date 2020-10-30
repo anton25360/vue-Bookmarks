@@ -1,25 +1,25 @@
 <template>
   <div id="app">
-    <Bar/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Card name='Netflix'/>
+    <p>hello human</p>
+    <Bar />
+    <!-- <Card name='Netflix'/>
     <Card name='Prime Video'/>
     <Card name='PLEX'/>
-    <Card name='Quibi'/>
+    <Card name='Quibi'/> -->
   </div>
 </template>
 
 <script>
-import Card from './components/Card.vue'
+// import Card from './components/Card.vue'
 import Bar from './components/Bar.vue'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Card,
+  //   Card,
     Bar
   }
-}
+};
 </script>
 
 <style>
