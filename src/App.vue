@@ -12,10 +12,13 @@
     <Card name="Disney+" />
     <Card name="Apple TV+" />
 
-    <div id="modalContent">
-      <p>hello i am modal</p>
-      <button id="modalCloseBtn">close me</button>
+    <div id="modalBackground">
+      <div id="modalContent">
+        <p>hello i am modal</p>
+        <button id="modalCloseBtn">close me</button>
+      </div>
     </div>
+
   </div>
 </template>
 
@@ -26,7 +29,7 @@ console.log("script loaded");
 
 //js here
 window.onload = () => {
-  document.getElementById("modalContent").style.visibility = "hidden"; //hide modal
+  document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
 
   document.getElementById("navBtn").onclick = createNewBookmark; //run createNewBookmark
   document.getElementById("modalCloseBtn").onclick = closeModal; //run closeModal
@@ -34,11 +37,11 @@ window.onload = () => {
 
 function createNewBookmark() {
   console.log("creating new bookmark...");
-  document.getElementById("modalContent").style.visibility = "visible";
+  document.getElementById("modalBackground").style.visibility = "visible";
 }
 
 function closeModal() {
-  document.getElementById("modalContent").style.visibility = "hidden";
+  document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal on close
 }
 
 export default {
@@ -91,8 +94,24 @@ export default {
   cursor: pointer;
 }
 
+#modalBackground {
+  /* visibility: hidden; */
+  /* display: none; */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  border: 2px solid red;
+}
 #modalContent {
   /* visibility: hidden; */
   border: 2px solid red;
+  background-color: white;
 }
 </style>
