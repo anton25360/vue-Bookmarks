@@ -1,6 +1,6 @@
 <template>
   <div class="appBar">
-    <h1>WatchOn</h1>
+    <h1>Bookmarks</h1>
   </div>
 </template>
 

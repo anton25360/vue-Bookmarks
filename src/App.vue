@@ -1,22 +1,23 @@
 <template>
   <div id="app">
-    <p>hello human</p>
     <Bar />
-    <!-- <Card name='Netflix'/>
+    <Card name='Netflix'/>
     <Card name='Prime Video'/>
     <Card name='PLEX'/>
-    <Card name='Quibi'/> -->
+    <Card name='iPlayer'/>
+    <Card name='Disney+'/>
+    <Card name='Apple TV+'/>
   </div>
 </template>
 
 <script>
-// import Card from './components/Card.vue'
+import Card from './components/Card.vue'
 import Bar from './components/Bar.vue'
 
 export default {
   name: "App",
   components: {
-  //   Card,
+    Card,
     Bar
   }
 };
@@ -32,5 +33,8 @@ export default {
   border: 6px solid red;
   padding: 0;
   margin: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 </style>
