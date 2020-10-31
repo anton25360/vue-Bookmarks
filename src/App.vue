@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <Bar />
+    <div class="navBar">
+      <p>Bookmarks2</p>
+      <button id="newBookmarkBtn">HELLO</button>
+    </div>
+
     <Card name='Netflix'/>
     <Card name='Prime Video'/>
     <Card name='PLEX'/>
@@ -12,13 +16,11 @@
 
 <script>
 import Card from './components/Card.vue'
-import Bar from './components/Bar.vue'
 
 export default {
   name: "App",
   components: {
-    Card,
-    Bar
+    Card
   }
 };
 </script>
@@ -30,11 +32,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
-  border: 6px solid red;
   padding: 0;
   margin: 0;
 
   display: flex;
   flex-direction: column;
+}
+
+.navBar{
+  border: 2px solid blue;
+
 }
 </style>
