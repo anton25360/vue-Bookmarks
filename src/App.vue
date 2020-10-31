@@ -5,40 +5,38 @@
       <p id="navBtn">New Bookmark</p>
     </div>
 
-    <Card name='Netflix'/>
-    <Card name='Prime Video'/>
-    <Card name='PLEX'/>
-    <Card name='iPlayer'/>
-    <Card name='Disney+'/>
-    <Card name='Apple TV+'/>
+    <Card name="Netflix" />
+    <Card name="Prime Video" />
+    <Card name="PLEX" />
+    <Card name="iPlayer" />
+    <Card name="Disney+" />
+    <Card name="Apple TV+" />
   </div>
 </template>
 
 <script>
-import Card from './components/Card.vue'
+import Card from "./components/Card.vue";
 
 export default {
   name: "App",
   components: {
-    Card
-  }
+    Card,
+  },
 };
 </script>
 
 <style>
-
 @font-face {
-  font-family: 'Product Sans';
+  font-family: "Product Sans";
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+      format("woff2");
 }
 
 #app {
-
-
-  font-family: 'Product Sans';
-  /* text-align: center; */
+  font-family: "Product Sans";
   padding: 0;
   margin: 0;
 
@@ -46,31 +44,26 @@ export default {
   flex-direction: column;
 }
 
-.navBar{
-  /* border: 2px solid blue; */
+.navBar {
   background-color: #2c3e50;
-  /* padding: 10px; */
-
-
 }
 
-#navTitle{
+#navTitle {
   color: white;
   float: left;
   font-size: 20px;
   margin-left: 20px;
 }
 
-#navBtn{
+#navBtn {
   float: right;
   background-color: white;
   color: #2c3e50;
   padding: 5px 10px;
   border-radius: 3px;
-  margin-right: 20px; 
+  margin-right: 20px;
 }
-#navBtn:hover{
-  /* background-color: red; */
+#navBtn:hover {
   cursor: pointer;
 }
 </style>
