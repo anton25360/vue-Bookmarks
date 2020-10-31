@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="navBar">
-      <p>Bookmarks2</p>
+      <p style="float:left">Bookmarks2</p>
       <button id="newBookmarkBtn">HELLO</button>
     </div>
 
@@ -42,5 +42,9 @@ export default {
 .navBar{
   border: 2px solid blue;
 
+}
+
+#newBookmarkBtn{
+  float: right;
 }
 </style>
