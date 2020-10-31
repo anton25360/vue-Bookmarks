@@ -11,11 +11,35 @@
     <Card name="iPlayer" />
     <Card name="Disney+" />
     <Card name="Apple TV+" />
+
+    <div id="modalContent">
+      <p>hello i am modal</p>
+      <button id="modalCloseBtn">close me</button>
+    </div>
   </div>
 </template>
 
 <script>
 import Card from "./components/Card.vue";
+
+console.log("script loaded");
+
+//js here
+window.onload = () => {
+  document.getElementById("modalContent").style.visibility = "hidden"; //hide modal
+
+  document.getElementById("navBtn").onclick = createNewBookmark; //run createNewBookmark
+  document.getElementById("modalCloseBtn").onclick = closeModal; //run closeModal
+};
+
+function createNewBookmark() {
+  console.log("creating new bookmark...");
+  document.getElementById("modalContent").style.visibility = "visible";
+}
+
+function closeModal() {
+  document.getElementById("modalContent").style.visibility = "hidden";
+}
 
 export default {
   name: "App",
@@ -65,5 +89,10 @@ export default {
 }
 #navBtn:hover {
   cursor: pointer;
+}
+
+#modalContent {
+  /* visibility: hidden; */
+  border: 2px solid red;
 }
 </style>
