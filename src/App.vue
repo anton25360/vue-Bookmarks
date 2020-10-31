@@ -67,10 +67,10 @@ export default {
   color: #2c3e50;
   padding: 5px 10px;
   border-radius: 3px;
-  margin-right: 20px;
-
-
-
-  
+  margin-right: 20px; 
+}
+#navBtn:hover{
+  /* background-color: red; */
+  cursor: pointer;
 }
 </style>
