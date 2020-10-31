@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="navBar">
-      <p style="float:left">Bookmarks2</p>
-      <button id="newBookmarkBtn">HELLO</button>
+      <p id="navTitle">Bookmarks</p>
+      <p id="navBtn">New Bookmark</p>
     </div>
 
     <Card name='Netflix'/>
@@ -26,12 +26,19 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+  font-family: 'Product Sans';
   /* text-align: center; */
-  color: #2c3e50;
   padding: 0;
   margin: 0;
 
@@ -40,11 +47,30 @@ export default {
 }
 
 .navBar{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
+  background-color: #2c3e50;
+  /* padding: 10px; */
+
 
 }
 
-#newBookmarkBtn{
+#navTitle{
+  color: white;
+  float: left;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+#navBtn{
   float: right;
+  background-color: white;
+  color: #2c3e50;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-right: 20px;
+
+
+
+  
 }
 </style>
