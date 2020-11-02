@@ -40,9 +40,9 @@ console.log("script loaded");
 //js here
 window.onload = () => {
   //trigger colour chamge on key press:
-  document.getElementById("inputColour1").onkeydown = setOutputBoxColour;
-  document.getElementById("inputColour2").onkeydown = setOutputBoxColour;
-  
+  document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
+  document.getElementById("inputColour2").onkeyup = setOutputBoxColour;
+
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
   document.getElementById("navBtn").onclick = createNewBookmark; //run createNewBookmark (opens modal)
   document.getElementById("modalDoneBtn").onclick = closeModal; //run closeModal (closes modal)
@@ -62,7 +62,7 @@ function setOutputBoxColour() {
   let colour2 = document.getElementById("inputColour2").value;
 
   document.getElementById("inputColourOutput").style.backgroundImage =
-    "linear-gradient(145deg, " + colour1 + ","+colour2+")"; //sets colout of output box in modal
+    "linear-gradient(145deg, " + colour1 + "," + colour2 + ")"; //sets colout of output box in modal
 }
 
 export default {
