@@ -122,8 +122,9 @@ export default {
 }
 #modalContent {
   /* visibility: hidden; */
-  border: 2px solid red;
+  /* border: 2px solid red; */
   background-color: white;
+  border-radius: 4px;
   display: inline-block;
   /* padding: 20px; */
 }
@@ -168,12 +169,13 @@ input {
 }
 
 #inputForm {
-  border: 2px solid blueviolet;
+  /* border: 2px solid blueviolet; */
   margin: 20px;
 }
 
 #inputColourOutput{
-  border: 2px solid goldenrod;
+  border: 1px solid black;
+  border-radius: 3px;
   /* text-align: center; */
   margin: 0 auto;
   height: 150px;
