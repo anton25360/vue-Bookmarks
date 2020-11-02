@@ -17,12 +17,24 @@
         <div id="inputForm">
           <p class="inputTitle">TITLE</p>
           <input type="text" id="inputName" placeholder="Bookmark Name" /><br />
-          <input type="text" id="inputInitial" placeholder="Initial" />
           <p class="inputTitle">COLOURS</p>
-          <input value="red" type="text" id="inputColour1" placeholder="eg: red" /><br />
-          <input value="blue" type="text" id="inputColour2" placeholder="eg: blue" />
+          <input
+            value="red"
+            type="text"
+            id="inputColour1"
+            placeholder="eg: red"
+          /><br />
+          <input
+            value="blue"
+            type="text"
+            id="inputColour2"
+            placeholder="eg: blue"
+          />
           <p class="inputTitle">OUTPUT</p>
-          <div id="inputColourOutput"></div>
+          <div id="boxColourOutput">
+            <p id="boxInitial"></p>
+            <!-- <p id="boxTitle">LOLOL</p> -->
+          </div>
         </div>
 
         <button id="modalCancelBtn">cancel</button>
@@ -39,11 +51,14 @@ console.log("script loaded");
 
 //js here
 window.onload = () => {
-  setOutputBoxColour()
+  setOutputBoxColour(); //set default colours
 
   //trigger colour chamge on key press:
   document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
   document.getElementById("inputColour2").onkeyup = setOutputBoxColour;
+
+  //trigger initial onPress
+  document.getElementById("inputName").onkeyup = setInitialLetter;
 
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
   document.getElementById("navBtn").onclick = createNewBookmark; //run createNewBookmark (opens modal)
@@ -63,11 +78,15 @@ function setOutputBoxColour() {
   let colour1 = document.getElementById("inputColour1").value;
   let colour2 = document.getElementById("inputColour2").value;
 
-
-
-
-  document.getElementById("inputColourOutput").style.backgroundImage =
+  document.getElementById("boxColourOutput").style.backgroundImage =
     "linear-gradient(145deg, " + colour1 + "," + colour2 + ")"; //sets colout of output box in modal
+}
+
+function setInitialLetter() {
+  let initial = document.getElementById("inputName").value.charAt(0)
+  console.log(initial);
+
+  document.getElementById("boxInitial").innerText = initial
 }
 
 export default {
@@ -189,12 +208,24 @@ input {
   margin: 20px;
 }
 
-#inputColourOutput {
+#boxColourOutput {
   border: 1px solid black;
   border-radius: 3px;
   /* text-align: center; */
   margin: 0 auto;
   height: 150px;
   width: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
+#boxInitial {
+  /* border: 2px solid red; */
+
+/* font-family: 'product'; */
+font-size: 100px;
+}
+
 </style>
