@@ -19,8 +19,8 @@
           <input type="text" id="inputName" placeholder="Bookmark Name" /><br />
           <input type="text" id="inputInitial" placeholder="Initial" />
           <p class="inputTitle">COLOURS</p>
-          <input type="text" id="inputColour1" placeholder="eg: red" /><br />
-          <input type="text" id="inputColour2" placeholder="eg: blue" />
+          <input value="red" type="text" id="inputColour1" placeholder="eg: red" /><br />
+          <input value="blue" type="text" id="inputColour2" placeholder="eg: blue" />
           <p class="inputTitle">OUTPUT</p>
           <div id="inputColourOutput"></div>
         </div>
@@ -39,6 +39,8 @@ console.log("script loaded");
 
 //js here
 window.onload = () => {
+  setOutputBoxColour()
+
   //trigger colour chamge on key press:
   document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
   document.getElementById("inputColour2").onkeyup = setOutputBoxColour;
@@ -60,6 +62,9 @@ function closeModal() {
 function setOutputBoxColour() {
   let colour1 = document.getElementById("inputColour1").value;
   let colour2 = document.getElementById("inputColour2").value;
+
+
+
 
   document.getElementById("inputColourOutput").style.backgroundImage =
     "linear-gradient(145deg, " + colour1 + "," + colour2 + ")"; //sets colout of output box in modal
