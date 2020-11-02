@@ -14,21 +14,17 @@
 
     <div id="modalBackground">
       <div id="modalContent">
-        <form id="inputForm">
+        <div id="inputForm">
           <p class="inputTitle">TITLE</p>
           <input type="text" id="inputName" placeholder="Bookmark Name" /><br />
-          <input
-            type="text"
-            id="inputInitial"
-            placeholder="Initial (optional)"
-          />
+          <input type="text" id="inputInitial" placeholder="Initial" />
           <p class="inputTitle">COLOURS</p>
           <input type="text" id="inputColour1" placeholder="Red" /><br />
           <input type="text" id="inputColour2" placeholder="#ff0000" />
-        </form>
-        <p class="inputTitle">OUTPUT</p>
+          <p class="inputTitle">OUTPUT</p>
+          <div id="inputColourOutput"></div>
+        </div>
 
-        <img src="https://picsum.photos/100" alt="image" /><br />
         <button id="modalCancelBtn">cancel</button>
         <button id="modalDoneBtn">Done</button>
       </div>
@@ -173,5 +169,14 @@ input {
 
 #inputForm {
   border: 2px solid blueviolet;
+  margin: 20px;
+}
+
+#inputColourOutput{
+  border: 2px solid goldenrod;
+  /* text-align: center; */
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
 }
 </style>
