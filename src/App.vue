@@ -19,8 +19,8 @@
           <input type="text" id="inputName" placeholder="Bookmark Name" /><br />
           <input type="text" id="inputInitial" placeholder="Initial" />
           <p class="inputTitle">COLOURS</p>
-          <input type="text" id="inputColour1" placeholder="Red" /><br />
-          <input type="text" id="inputColour2" placeholder="#ff0000" />
+          <input type="text" id="inputColour1" placeholder="eg: red" /><br />
+          <input type="text" id="inputColour2" placeholder="eg: blue" />
           <p class="inputTitle">OUTPUT</p>
           <div id="inputColourOutput"></div>
         </div>
