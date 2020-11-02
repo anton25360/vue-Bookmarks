@@ -14,8 +14,23 @@
 
     <div id="modalBackground">
       <div id="modalContent">
-        <p>hello i am modal</p>
-        <button id="modalCloseBtn">close me</button>
+        <form id="inputForm">
+          <p class="inputTitle">TITLE</p>
+          <input type="text" id="inputName" placeholder="Bookmark Name" /><br />
+          <input
+            type="text"
+            id="inputInitial"
+            placeholder="Initial (optional)"
+          />
+          <p class="inputTitle">COLOURS</p>
+          <input type="text" id="inputColour1" placeholder="Red" /><br />
+          <input type="text" id="inputColour2" placeholder="#ff0000" />
+        </form>
+        <p class="inputTitle">OUTPUT</p>
+
+        <img src="https://picsum.photos/100" alt="image" /><br />
+        <button id="modalCancelBtn">cancel</button>
+        <button id="modalDoneBtn">Done</button>
       </div>
     </div>
   </div>
@@ -31,7 +46,7 @@ window.onload = () => {
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
 
   document.getElementById("navBtn").onclick = createNewBookmark; //run createNewBookmark
-  document.getElementById("modalCloseBtn").onclick = closeModal; //run closeModal
+  document.getElementById("modalDoneBtn").onclick = closeModal; //run closeModal
 };
 
 function createNewBookmark() {
@@ -53,7 +68,7 @@ export default {
 
 <style>
 @font-face {
-  font-family: "Product Sans";
+  font-family: "product";
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans"), local("OpenSans"),
@@ -62,7 +77,7 @@ export default {
 }
 
 #app {
-  font-family: "Product Sans";
+  font-family: "product";
   padding: 0;
   margin: 0;
 
@@ -94,8 +109,6 @@ export default {
 }
 
 #modalBackground {
-  /* visibility: hidden; */
-  /* display: flex; */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -116,5 +129,49 @@ export default {
   border: 2px solid red;
   background-color: white;
   display: inline-block;
+  /* padding: 20px; */
+}
+#modalCancelBtn {
+  float: left;
+  font-family: "product";
+  /* font-weight: bold; */
+  font-size: 17px;
+  color: rgb(0, 81, 255);
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 10px;
+}
+#modalDoneBtn {
+  float: right;
+  font-family: "product";
+  /* font-weight: bold; */
+  font-size: 17px;
+  color: white;
+  background-color: rgb(0, 81, 255);
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+#modalDoneBtn,
+#modalCancelBtn:hover {
+  cursor: pointer;
+}
+
+input {
+  font-family: "product";
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.inputTitle {
+  text-align: center;
+}
+
+#inputForm {
+  border: 2px solid blueviolet;
 }
 </style>
