@@ -81,7 +81,12 @@ function closeModal() {
 }
 
 function AddBookmark() {
-  alert("bookmark added");
+  let name = document.getElementById("inputName").value;
+  let link = document.getElementById("inputLink").value;
+  let colour1 = document.getElementById("inputColour1").value;
+  let colour2 = document.getElementById("inputColour2").value;
+
+  alert(name+link+colour1+colour2);
   closeModal();
 }
 function setOutputBoxColour() {
