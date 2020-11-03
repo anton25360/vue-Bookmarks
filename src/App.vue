@@ -18,6 +18,7 @@
           <p class="inputTitle">TITLE</p>
           <input type="text" id="inputName" placeholder="Bookmark Name" /><br />
           <p class="inputTitle">COLOURS</p>
+          <p style="text-align: center">you can use words or hex codes.<br/>Click <a href="https://uigradients.com/">here</a> for inspiration.</p>
           <input
             value="red"
             type="text"
@@ -33,7 +34,6 @@
           <p class="inputTitle">OUTPUT</p>
           <div id="boxColourOutput">
             <p id="boxInitial"></p>
-            <!-- <p id="boxTitle">LOLOL</p> -->
           </div>
         </div>
 
@@ -227,8 +227,13 @@ input {
 /* font-family: 'product'; */
 font-size: 100px;
 color: white;
-font-weight: bold;
+/* font-weight: bold; */
 text-transform: uppercase;
+}
+a{
+  /* font-weight: 00; */
+  text-decoration: none;
+  color: rgb(0, 81, 255);
 }
 
 </style>
