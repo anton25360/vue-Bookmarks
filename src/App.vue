@@ -226,6 +226,9 @@ input {
 
 /* font-family: 'product'; */
 font-size: 100px;
+color: white;
+font-weight: bold;
+text-transform: uppercase;
 }
 
 </style>
