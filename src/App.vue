@@ -16,7 +16,8 @@
       <div id="modalContent">
         <div id="inputForm">
           <p class="inputTitle">TITLE</p>
-          <input type="text" id="inputName" placeholder="Bookmark Name" /><br />
+          <input type="text" id="inputName" placeholder="Name" /><br />
+          <input type="text" id="inputLink" placeholder="Web Adress" /><br />
           <p class="inputTitle">COLOURS</p>
           <p style="text-align: center">you can use words or hex codes.<br/>Click <a href="https://uigradients.com/">here</a> for inspiration.</p>
           <input
