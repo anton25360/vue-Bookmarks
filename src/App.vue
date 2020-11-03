@@ -19,7 +19,10 @@
           <input type="text" id="inputName" placeholder="Name" /><br />
           <input type="text" id="inputLink" placeholder="Web Adress" /><br />
           <p class="inputTitle">COLOURS</p>
-          <p style="text-align: center">you can use words or hex codes.<br/>Click <a href="https://uigradients.com/">here</a> for inspiration.</p>
+          <p style="text-align: center">
+            you can use words or hex codes.<br />Click
+            <a href="https://uigradients.com/">here</a> for inspiration.
+          </p>
           <input
             value="red"
             type="text"
@@ -58,15 +61,17 @@ window.onload = () => {
   document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
   document.getElementById("inputColour2").onkeyup = setOutputBoxColour;
 
-  //trigger initial onPress
+  //trigger initial(letter) onPress
   document.getElementById("inputName").onkeyup = setInitialLetter;
 
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
-  document.getElementById("navBtn").onclick = createNewBookmark; //run createNewBookmark (opens modal)
-  document.getElementById("modalDoneBtn").onclick = closeModal; //run closeModal (closes modal)
+
+  document.getElementById("navBtn").onclick = openModal; //run createNewBookmark (opens modal)
+  document.getElementById("modalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
+  document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
 };
 
-function createNewBookmark() {
+function openModal() {
   console.log("creating new bookmark...");
   document.getElementById("modalBackground").style.visibility = "visible";
 }
@@ -75,6 +80,10 @@ function closeModal() {
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal on close
 }
 
+function AddBookmark() {
+  alert("bookmark added");
+  closeModal();
+}
 function setOutputBoxColour() {
   let colour1 = document.getElementById("inputColour1").value;
   let colour2 = document.getElementById("inputColour2").value;
@@ -84,10 +93,10 @@ function setOutputBoxColour() {
 }
 
 function setInitialLetter() {
-  let initial = document.getElementById("inputName").value.charAt(0)
+  let initial = document.getElementById("inputName").value.charAt(0);
   console.log(initial);
 
-  document.getElementById("boxInitial").innerText = initial
+  document.getElementById("boxInitial").innerText = initial;
 }
 
 export default {
@@ -220,21 +229,19 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 #boxInitial {
   /* border: 2px solid red; */
 
-/* font-family: 'product'; */
-font-size: 100px;
-color: white;
-/* font-weight: bold; */
-text-transform: uppercase;
+  /* font-family: 'product'; */
+  font-size: 100px;
+  color: white;
+  /* font-weight: bold; */
+  text-transform: uppercase;
 }
-a{
+a {
   /* font-weight: 00; */
   text-decoration: none;
   color: rgb(0, 81, 255);
 }
-
 </style>
