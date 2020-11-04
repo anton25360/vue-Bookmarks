@@ -166,9 +166,9 @@ export default {
   height: 100vh;
   /* background-color: aqua; */
 
-  background: linear-gradient(-45deg, #ecc864, #e95f94, #3b98e4, #3fe4bd);
+  background: linear-gradient(-45deg, #D3CCE3, #e5ebff, #bcd4e7, #E2E2E2);
   background-size: 400% 400%;
-  animation: gradient 13s ease infinite;
+  animation: gradient 5s ease infinite;
 }
 @keyframes gradient {
   0% {
