@@ -8,7 +8,7 @@
     <Tile name="test" link="x.com" colour1="red" colour2="blue" />
 
     <div id="tileGrid">
-      <div class="tileContainer" v-for="item in tiles" v-bind:key="item">
+      <div class="tileContainer" v-for="item in tiles" v-bind:key="item" v-bind:style="{ 'background-image': 'linear-gradient(145deg,'+item[2]+','+item[3]+')' }">
         {{ item[0] }}
       </div>
     </div>
@@ -153,7 +153,6 @@ export default {
   font-family: "product";
   padding: 0;
   margin: 0;
-
   display: flex;
   flex-direction: column;
 }
