@@ -99,6 +99,15 @@ function AddBookmark() {
   let colour1 = document.getElementById("inputColour1").value;
   let colour2 = document.getElementById("inputColour2").value;
 
+  //check for HTTP or HTTPS
+  if (link.includes('http://') || link.includes('https://')) {
+    // alert(link+ ' is secure')
+  } else {
+    link = 'https://'+link
+    // alert('new link is: '+link)
+
+  }
+
   let dataArray = [name, link, colour1, colour2];
 
   //create empty array if it doesnt already exist
