@@ -192,6 +192,8 @@ export default {
   border-radius: 4px;
   display: inline-block;
   /* padding: 20px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 #modalCancelBtn {
   float: left;
@@ -234,17 +236,19 @@ input {
 }
 
 #inputForm {
-  border: 2px solid blueviolet;
+  /* border: 2px solid blueviolet; */
   margin: 20px;
 }
 
 #boxColourOutput {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 3px;
   /* text-align: center; */
   margin: 0 auto;
   height: 150px;
   width: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 
   display: flex;
   justify-content: center;
