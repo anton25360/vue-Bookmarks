@@ -5,12 +5,8 @@
       <p id="navBtn">New Bookmark</p>
     </div>
 
-    <Card name="Netflix" />
-    <Card name="Prime Video" />
-    <Card name="PLEX" />
-    <Card name="iPlayer" />
-    <Card name="Disney+" />
-    <Card name="Apple TV+" />
+    <Tile name="Netflix" />
+
 
     <div id="modalBackground">
       <div id="modalContent">
@@ -49,7 +45,7 @@
 </template>
 
 <script>
-import Card from "./components/Card.vue";
+import Tile from "./components/Tile.vue";
 
 console.log("script loaded");
 
@@ -122,7 +118,7 @@ function setInitialLetter() {
 export default {
   name: "App",
   components: {
-    Card,
+    Tile,
   },
 };
 </script>

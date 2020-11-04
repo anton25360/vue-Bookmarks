@@ -8,7 +8,7 @@
 //js
 <script>
 export default {
-  name: 'Card',
+  name: 'Tile',
   props: {
     name: String
   }
