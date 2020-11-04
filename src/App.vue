@@ -7,9 +7,10 @@
 
     <Tile name="test" link="x.com" colour1="red" colour2="blue" />
 
-<ul>
-  <li v-for="item in tiles"  v-bind:key="item">{{item}}</li>
-</ul>
+<div id="tilesGrid">
+  <div class="tileContainer" v-for="item in tiles"  v-bind:key="item">{{item[0]}}</div>
+
+</div>
 
 
     <div id="modalBackground">
