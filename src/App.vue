@@ -161,12 +161,25 @@ export default {
   padding: 0;
   margin: 0;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  /* border: 2px solid green; */
   height: 100vh;
-  background-color: aqua;
+  /* background-color: aqua; */
+
+  background: linear-gradient(-45deg, #ecc864, #e95f94, #3b98e4, #3fe4bd);
+  background-size: 400% 400%;
+  animation: gradient 13s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .navBar {
@@ -284,7 +297,7 @@ a {
 }
 
 #tileGrid {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -314,16 +327,14 @@ a {
 }
 #newBookmarkBtn {
   /* border: 2px solid brown; */
-    color: #1b1d1f;
-
+  color: #1b1d1f;
 }
 #settingsBtn {
   /* border: 2px solid fuchsia; */
 }
-.fas{
-    font-size: 25px;
-    background-color: transparent;
-    border: none;
-
+.fas {
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
 }
 </style>
