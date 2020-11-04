@@ -5,8 +5,7 @@
       <p id="navBtn">New Bookmark</p>
     </div>
 
-    <Tile name="Netflix" />
-
+    <Tile name="test" link="x.com" colour1="red" colour2="blue" />
 
     <div id="modalBackground">
       <div id="modalContent">
@@ -84,7 +83,6 @@ function AddBookmark() {
 
   let dataArray = [name, link, colour1, colour2];
 
-
   //create empty array if it doesnt already exist
   if (localStorage.getItem("tiles") == null) {
     localStorage.setItem("tiles", JSON.stringify([]));
@@ -95,8 +93,8 @@ function AddBookmark() {
   localStorage.setItem("tiles", JSON.stringify(tilesArrayDecoded));
 
   //clears input fields
-  document.getElementById('inputName').value = ''
-  document.getElementById('inputLink').value = ''
+  document.getElementById("inputName").value = "";
+  document.getElementById("inputLink").value = "";
 
   closeModal();
 }
@@ -188,8 +186,7 @@ export default {
   border-radius: 4px;
   display: inline-block;
   /* padding: 20px; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #modalCancelBtn {
   float: left;
@@ -243,8 +240,7 @@ input {
   margin: 0 auto;
   height: 150px;
   width: 150px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   display: flex;
   justify-content: center;
