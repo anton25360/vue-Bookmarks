@@ -16,10 +16,8 @@
           'background-image':
             'linear-gradient(145deg,' + item[2] + ',' + item[3] + ')',
         }"
-        onclick="location.href = 'https://myurl'"
-
       >
-        {{ item[0] }}
+        <p id="boxInitialCopy">{{ item[0].charAt(0) }}</p>
       </div>
     </div>
 
@@ -207,18 +205,14 @@ export default {
   align-items: center;
 }
 #modalContent {
-  /* visibility: hidden; */
-  /* border: 2px solid red; */
   background-color: white;
   border-radius: 4px;
   display: inline-block;
-  /* padding: 20px; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #modalCancelBtn {
   float: left;
   font-family: "product";
-  /* font-weight: bold; */
   font-size: 17px;
   color: rgb(0, 81, 255);
   background-color: transparent;
@@ -256,14 +250,11 @@ input {
 }
 
 #inputForm {
-  /* border: 2px solid blueviolet; */
   margin: 20px;
 }
 
 #boxColourOutput {
-  /* border: 1px solid black; */
   border-radius: 3px;
-  /* text-align: center; */
   margin: 0 auto;
   height: 150px;
   width: 150px;
@@ -274,16 +265,16 @@ input {
   align-items: center;
 }
 #boxInitial {
-  /* border: 2px solid red; */
-
-  /* font-family: 'product'; */
   font-size: 100px;
-  color: white;
-  /* font-weight: bold; */
+  color: rgba(255, 255, 255,0.8);
+  text-transform: uppercase;
+}
+#boxInitialCopy {
+  font-size: 100px;
+  color: rgba(255, 255, 255,0.8);
   text-transform: uppercase;
 }
 a {
-  /* font-weight: 00; */
   text-decoration: none;
   color: rgb(0, 81, 255);
 }
@@ -293,5 +284,16 @@ a {
 }
 .tileContainer {
   border: 2px solid blue;
+
+  border-radius: 3px;
+  /* margin: 0 auto; */
+  height: 150px;
+  width: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 </style>
