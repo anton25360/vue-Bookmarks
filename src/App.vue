@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div class="navBar">
+    <!-- <div class="navBar">
       <p id="navTitle">Bookmarks</p>
       <p id="navBtn">New Bookmark</p>
-    </div>
+    </div> -->
 
     <div id="tileGrid">
       <div
@@ -156,7 +156,12 @@ export default {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+    border: 2px solid green;
+    height: 100%;
+
 }
 
 .navBar {
@@ -275,14 +280,23 @@ a {
 
 #tileGrid {
   border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* flex-basis: 150px; */
+  /* flex-direction: column; */
+  padding: 0 100px;
 }
+
 .tileContainer {
   border: 2px solid blue;
+  margin: 30px;
 
   border-radius: 3px;
   /* margin: 0 auto; */
-  height: 150px;
-  width: 150px;
+  height: 140px;
+  width: 140px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   display: flex;
