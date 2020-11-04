@@ -56,7 +56,6 @@
 </template>
 
 <script>
-
 // var testArray = ["one", "two", "three"];
 console.log("script loaded");
 
@@ -127,8 +126,7 @@ function setInitialLetter() {
 
 export default {
   name: "App",
-  components: {
-  },
+  components: {},
   data() {
     return {
       items: ["hello", "vue", "js"],
@@ -262,12 +260,12 @@ input {
 }
 #boxInitial {
   font-size: 100px;
-  color: rgba(255, 255, 255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
 }
 #boxInitialCopy {
   font-size: 100px;
-  color: rgba(255, 255, 255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
 }
 a {
@@ -290,6 +288,5 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 </style>
