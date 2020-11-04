@@ -6,8 +6,8 @@
     </div> -->
     <!-- <p id="navBtn">New Bookmark</p> -->
     <div id="btnContainer">
-      <button id="newBookmarkBtn">PLUS</button>
-      <button id="settingsBtn">SETTINGS</button>
+      <button class="fas fa-plus" id="newBookmarkBtn"></button>
+      <!-- <button class="fas fa-cog" id="settingsBtn"></button> -->
     </div>
 
     <div id="tileGrid">
@@ -77,7 +77,7 @@ window.onload = () => {
 
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
 
-  document.getElementById("navBtn").onclick = openModal; //run createNewBookmark (opens modal)
+  document.getElementById("newBookmarkBtn").onclick = openModal; //run createNewBookmark (opens modal)
   document.getElementById("modalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
   document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
 };
@@ -310,11 +310,20 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
+  margin: 10px;
 }
 #newBookmarkBtn {
-  border: 2px solid brown;
+  /* border: 2px solid brown; */
+    color: #1b1d1f;
+
 }
 #settingsBtn {
-  border: 2px solid fuchsia;
+  /* border: 2px solid fuchsia; */
+}
+.fas{
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+
 }
 </style>
