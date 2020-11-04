@@ -7,6 +7,11 @@
 
     <Tile name="test" link="x.com" colour1="red" colour2="blue" />
 
+<ul>
+  <li v-for="item in tiles"  v-bind:key="item">{{item}}</li>
+</ul>
+
+
     <div id="modalBackground">
       <div id="modalContent">
         <div id="inputForm">
@@ -46,6 +51,9 @@
 <script>
 import Tile from "./components/Tile.vue";
 
+
+
+// var testArray = ["one", "two", "three"];
 console.log("script loaded");
 
 //js here
@@ -118,6 +126,17 @@ export default {
   components: {
     Tile,
   },
+  data() {
+  return {
+    items:  ['hello', 'vue', 'js'],
+    fruits:  ['apple', 'pear', 'bannana'],
+    tiles: JSON.parse(localStorage.getItem("tiles"))
+    // shoppingItems: [
+    //   {name: 'apple', price: '10'},
+    //   {name: 'orange', price: '12'}
+    // ]
+  }
+}
 };
 </script>
 
