@@ -100,7 +100,7 @@ function AddBookmark() {
 
   //clears input fields
   document.getElementById('inputName').value = ''
-  document.getElementById('inputField').value = ''
+  document.getElementById('inputLink').value = ''
 
   closeModal();
 }
