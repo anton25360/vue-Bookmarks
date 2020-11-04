@@ -7,11 +7,11 @@
 
     <Tile name="test" link="x.com" colour1="red" colour2="blue" />
 
-<div id="tilesGrid">
-  <div class="tileContainer" v-for="item in tiles"  v-bind:key="item">{{item[0]}}</div>
-
-</div>
-
+    <div id="tileGrid">
+      <div class="tileContainer" v-for="item in tiles" v-bind:key="item">
+        {{ item[0] }}
+      </div>
+    </div>
 
     <div id="modalBackground">
       <div id="modalContent">
@@ -51,8 +51,6 @@
 
 <script>
 import Tile from "./components/Tile.vue";
-
-
 
 // var testArray = ["one", "two", "three"];
 console.log("script loaded");
@@ -128,16 +126,16 @@ export default {
     Tile,
   },
   data() {
-  return {
-    items:  ['hello', 'vue', 'js'],
-    fruits:  ['apple', 'pear', 'bannana'],
-    tiles: JSON.parse(localStorage.getItem("tiles"))
-    // shoppingItems: [
-    //   {name: 'apple', price: '10'},
-    //   {name: 'orange', price: '12'}
-    // ]
-  }
-}
+    return {
+      items: ["hello", "vue", "js"],
+      fruits: ["apple", "pear", "bannana"],
+      tiles: JSON.parse(localStorage.getItem("tiles")),
+      // shoppingItems: [
+      //   {name: 'apple', price: '10'},
+      //   {name: 'orange', price: '12'}
+      // ]
+    };
+  },
 };
 </script>
 
@@ -279,5 +277,13 @@ a {
   /* font-weight: 00; */
   text-decoration: none;
   color: rgb(0, 81, 255);
+}
+
+#tileGrid{
+  border: 2px solid red;
+}
+.tileContainer{
+  border: 2px solid blue;
+
 }
 </style>
