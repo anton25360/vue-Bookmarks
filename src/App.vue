@@ -166,7 +166,7 @@ export default {
   height: 100vh;
   /* background-color: aqua; */
 
-  background: linear-gradient(-45deg, #D3CCE3, #e5ebff, #bcd4e7, #E2E2E2);
+  background: linear-gradient(-45deg, #d3cce3, #e5ebff, #bcd4e7, #e2e2e2);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
 }
@@ -323,18 +323,22 @@ a {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 10px;
+  margin: 20px;
 }
-#newBookmarkBtn {
-  /* border: 2px solid brown; */
-  color: #1b1d1f;
-}
-#settingsBtn {
-  /* border: 2px solid fuchsia; */
-}
+
 .fas {
-  font-size: 25px;
+  font-size: 30px;
   background-color: transparent;
   border: none;
+
+  color: #1b1d1f;
+}
+
+.fas {
+  transition: all 0.2s ease-in-out;
+}
+.fas:hover {
+  transform: scale(1.8);
+  cursor: pointer;
 }
 </style>
