@@ -8,7 +8,17 @@
     <Tile name="test" link="x.com" colour1="red" colour2="blue" />
 
     <div id="tileGrid">
-      <div class="tileContainer" v-for="item in tiles" v-bind:key="item" v-bind:style="{ 'background-image': 'linear-gradient(145deg,'+item[2]+','+item[3]+')' }">
+      <div
+        class="tileContainer"
+        v-for="item in tiles"
+        v-bind:key="item"
+        v-bind:style="{
+          'background-image':
+            'linear-gradient(145deg,' + item[2] + ',' + item[3] + ')',
+        }"
+        onclick="location.href = 'https://myurl'"
+
+      >
         {{ item[0] }}
       </div>
     </div>
@@ -278,11 +288,10 @@ a {
   color: rgb(0, 81, 255);
 }
 
-#tileGrid{
+#tileGrid {
   border: 2px solid red;
 }
-.tileContainer{
+.tileContainer {
   border: 2px solid blue;
-
 }
 </style>
