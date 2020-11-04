@@ -4,6 +4,11 @@
       <p id="navTitle">Bookmarks</p>
       <p id="navBtn">New Bookmark</p>
     </div> -->
+    <!-- <p id="navBtn">New Bookmark</p> -->
+    <div id="btnContainer">
+      <button id="newBookmarkBtn">PLUS</button>
+      <button id="settingsBtn">SETTINGS</button>
+    </div>
 
     <div id="tileGrid">
       <div
@@ -159,9 +164,9 @@ export default {
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-    border: 2px solid green;
-    height: 100vh;
-
+  /* border: 2px solid green; */
+  height: 100vh;
+  background-color: aqua;
 }
 
 .navBar {
@@ -198,7 +203,7 @@ export default {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,13 +289,11 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* flex-basis: 150px; */
-  /* flex-direction: column; */
   padding: 0 100px;
 }
 
 .tileContainer {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   margin: 30px;
 
   border-radius: 3px;
@@ -302,5 +305,16 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#btnContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#newBookmarkBtn {
+  border: 2px solid brown;
+}
+#settingsBtn {
+  border: 2px solid fuchsia;
 }
 </style>
