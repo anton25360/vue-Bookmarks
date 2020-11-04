@@ -14,6 +14,7 @@
 
     <div id="modalBackground">
       <div id="modalContent">
+        <!-- <h3 style="text-align: center">New Bookmark</h3> -->
         <div id="inputForm">
           <p class="inputTitle">TITLE</p>
           <input type="text" id="inputName" placeholder="Name" /><br />
@@ -86,7 +87,28 @@ function AddBookmark() {
   let colour1 = document.getElementById("inputColour1").value;
   let colour2 = document.getElementById("inputColour2").value;
 
-  alert(name+link+colour1+colour2);
+  let dataArray = [name, link, colour1, colour2];
+  // let dataObject = {
+  //   name: name,
+  //   link: link,
+  //   colour1: colour1,
+  //   colour2: colour2,
+  // };
+
+  //create empty array if it doesnt already exist
+  if (localStorage.getItem("tiles") == null) {
+    localStorage.setItem("tiles", JSON.stringify([]));
+  }
+
+  let tilesArrayDecoded = JSON.parse(localStorage.getItem("tiles"));
+  tilesArrayDecoded.push(dataArray);
+  localStorage.setItem("tiles", JSON.stringify(tilesArrayDecoded));
+
+
+let logThis = JSON.parse(localStorage.getItem("tiles"));
+console.log(logThis[0]);
+
+
   closeModal();
 }
 function setOutputBoxColour() {
@@ -219,7 +241,7 @@ input {
 }
 
 #inputForm {
-  /* border: 2px solid blueviolet; */
+  border: 2px solid blueviolet;
   margin: 20px;
 }
 
