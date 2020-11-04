@@ -5,8 +5,6 @@
       <p id="navBtn">New Bookmark</p>
     </div>
 
-    <Tile name="test" link="x.com" colour1="red" colour2="blue" />
-
     <div id="tileGrid">
       <div
         class="tileContainer"
@@ -58,7 +56,6 @@
 </template>
 
 <script>
-import Tile from "./components/Tile.vue";
 
 // var testArray = ["one", "two", "three"];
 console.log("script loaded");
@@ -131,7 +128,6 @@ function setInitialLetter() {
 export default {
   name: "App",
   components: {
-    Tile,
   },
   data() {
     return {
