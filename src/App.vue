@@ -160,7 +160,7 @@ export default {
   justify-content: center;
   align-items: center;
     border: 2px solid green;
-    height: 100%;
+    height: 100vh;
 
 }
 
