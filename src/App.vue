@@ -11,7 +11,9 @@
     </div>
 
     <div id="tileGrid">
-      <div
+      <a
+        v-bind:href="item[1]"
+        target="_blank"
         class="tileContainer"
         v-for="item in tiles"
         v-bind:key="item"
@@ -21,7 +23,7 @@
         }"
       >
         <p id="boxInitialCopy">{{ item[0].charAt(0) }}</p>
-      </div>
+      </a>
     </div>
 
     <div id="modalBackground">
@@ -29,7 +31,7 @@
         <div id="inputForm">
           <p class="inputTitle">TITLE</p>
           <input type="text" id="inputName" placeholder="Name" /><br />
-          <input type="text" id="inputLink" placeholder="Web Adress" /><br />
+          <input type="text" id="inputLink" placeholder="URL" /><br />
           <p class="inputTitle">COLOURS</p>
           <p style="text-align: center">
             you can use words or hex codes.<br />Click
@@ -306,18 +308,15 @@ a {
 }
 
 .tileContainer {
-  /* border: 2px solid blue; */
   margin: 30px;
-
   border-radius: 3px;
-  /* margin: 0 auto; */
   height: 140px;
   width: 140px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 3px solid red;
 }
 #btnContainer {
   position: absolute;
@@ -338,7 +337,7 @@ a {
   transition: all 0.2s ease-in-out;
 }
 .fas:hover {
-  transform: scale(1.8);
+  transform: scale(1.5);
   cursor: pointer;
 }
 </style>
