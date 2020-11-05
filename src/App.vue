@@ -100,12 +100,11 @@ function AddBookmark() {
   let colour2 = document.getElementById("inputColour2").value;
 
   //check for HTTP or HTTPS
-  if (link.includes('http://') || link.includes('https://')) {
+  if (link.includes("http://") || link.includes("https://")) {
     // alert(link+ ' is secure')
   } else {
-    link = 'https://'+link
+    link = "https://" + link;
     // alert('new link is: '+link)
-
   }
 
   let dataArray = [name, link, colour1, colour2];
@@ -325,8 +324,15 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid red;
+  /* border: 3px solid red; */
+  transition: all 0.2s ease-in-out;
 }
+
+.tileContainer:hover {
+  transform: scale(1.1);
+  /* cursor: pointer; */
+}
+
 #btnContainer {
   position: absolute;
   bottom: 0;
