@@ -22,7 +22,8 @@
             'linear-gradient(145deg,' + item[2] + ',' + item[3] + ')',
         }"
       >
-        <p id="boxInitialCopy">{{ item[0].charAt(0) }}</p>
+        <p id="boxLetter">{{ item[0].charAt(0) }}</p>
+        <!-- <p id="boxName">hello</p> -->
       </a>
     </div>
 
@@ -35,7 +36,8 @@
           <p class="inputTitle">COLOURS</p>
           <p style="text-align: center">
             you can use words or hex codes.<br />Click
-            <a href="https://uigradients.com/">here</a> for inspiration.
+            <a id="uigLink" href="https://uigradients.com/">here</a> for
+            inspiration.
           </p>
           <input
             value="red"
@@ -291,17 +293,22 @@ input {
   justify-content: center;
   align-items: center;
 }
+/* in modal */
 #boxInitial {
   font-size: 100px;
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
 }
-#boxInitialCopy {
+#boxLetter {
   font-size: 100px;
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
+  text-decoration: transparent;
+
+  /* text-decoration: underline ; */
+  border: 2px solid red;
 }
-a {
+#uigLink {
   text-decoration: none;
   color: rgb(0, 81, 255);
 }
@@ -324,6 +331,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+
   /* border: 3px solid red; */
   transition: all 0.2s ease-in-out;
 }
