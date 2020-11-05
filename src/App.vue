@@ -23,7 +23,7 @@
         }"
       >
         <p id="boxLetter">{{ item[0].charAt(0) }}</p>
-        <!-- <p id="boxName">hello</p> -->
+        <p id="boxName">{{ item[0] }}</p>
       </a>
     </div>
 
@@ -303,11 +303,17 @@ input {
   font-size: 100px;
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
-  text-decoration: transparent;
-
-  /* text-decoration: underline ; */
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
+
+#boxName{
+  color: red;
+  position: absolute;
+  margin-top: 190px;
+
+color: black;
+}
+
 #uigLink {
   text-decoration: none;
   color: rgb(0, 81, 255);
