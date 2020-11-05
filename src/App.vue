@@ -100,16 +100,17 @@ function AddBookmark() {
   let link = document.getElementById("inputLink").value;
   let colour1 = document.getElementById("inputColour1").value;
   let colour2 = document.getElementById("inputColour2").value;
+  const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1)
+
 
   //check for HTTP or HTTPS
   if (link.includes("http://") || link.includes("https://")) {
-    // alert(link+ ' is secure')
+    // do nothing
   } else {
-    link = "https://" + link;
-    // alert('new link is: '+link)
+    link = "https://" + link; //add https to the link's start
   }
 
-  let dataArray = [name, link, colour1, colour2];
+  let dataArray = [nameCapitalized, link, colour1, colour2];
 
   //create empty array if it doesnt already exist
   if (localStorage.getItem("tiles") == null) {
