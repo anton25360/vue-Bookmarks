@@ -311,10 +311,8 @@ input {
 }
 
 #boxName {
-  color: red;
   position: absolute;
-  margin-top: 190px;
-
+  margin-top: 195px;
   color: black;
 }
 
