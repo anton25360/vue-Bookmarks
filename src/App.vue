@@ -1,13 +1,8 @@
 <template>
   <div id="app">
-    <!-- <div class="navBar">
-      <p id="navTitle">Bookmarks</p>
-      <p id="navBtn">New Bookmark</p>
-    </div> -->
-    <!-- <p id="navBtn">New Bookmark</p> -->
+    <p id="introText">hello</p>
     <div id="btnContainer">
       <button class="fas fa-plus" id="newBookmarkBtn"></button>
-      <!-- <button class="fas fa-cog" id="settingsBtn"></button> -->
     </div>
 
     <div id="tileGrid">
@@ -370,5 +365,9 @@ input {
 .fas:hover {
   transform: scale(1.5);
   cursor: pointer;
+}
+#introText{
+  border: 2px solid red;
+  position: absolute;
 }
 </style>
