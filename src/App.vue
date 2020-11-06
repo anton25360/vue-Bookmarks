@@ -100,8 +100,7 @@ function AddBookmark() {
   let link = document.getElementById("inputLink").value;
   let colour1 = document.getElementById("inputColour1").value;
   let colour2 = document.getElementById("inputColour2").value;
-  const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1)
-
+  const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
 
   //check for HTTP or HTTPS
   if (link.includes("http://") || link.includes("https://")) {
@@ -126,7 +125,9 @@ function AddBookmark() {
   document.getElementById("inputLink").value = "";
 
   closeModal();
+  location.reload();
 }
+
 function setOutputBoxColour() {
   let colour1 = document.getElementById("inputColour1").value;
   let colour2 = document.getElementById("inputColour2").value;
@@ -144,7 +145,6 @@ function setInitialLetter() {
 
 export default {
   name: "App",
-  components: {},
   data() {
     return {
       items: ["hello", "vue", "js"],
@@ -307,12 +307,12 @@ input {
   /* border: 2px solid red; */
 }
 
-#boxName{
+#boxName {
   color: red;
   position: absolute;
   margin-top: 190px;
 
-color: black;
+  color: black;
 }
 
 #uigLink {
