@@ -2,7 +2,8 @@
   <div id="app">
     <p id="introText">To get started, use the + at the bottom of the screen.</p>
     <div id="btnContainer">
-      <button class="fas fa-plus" id="newBookmarkBtn"></button>
+      <button class="FAicon far fa-trash-alt" id="newBookmarkBtn"></button>
+      <button class="FAicon fas fa-plus" id="newBookmarkBtn"></button>
     </div>
 
     <div id="tileGrid">
@@ -74,10 +75,10 @@ window.onload = () => {
 
   //if array is empty, diplay welcome message
   if (JSON.parse(localStorage.getItem("tiles")).length == 0) {
-    console.log('empty boi');
-    document.getElementById('introText').style.visibility = 'visible'
+    console.log("empty boi");
+    document.getElementById("introText").style.visibility = "visible";
   } else {
-    console.log('not empty');
+    console.log("not empty");
   }
 
   //trigger colour chamge on key press:
@@ -357,7 +358,7 @@ input {
   margin: 20px;
 }
 
-.fas {
+.FAicon {
   font-size: 30px;
   background-color: transparent;
   border: none;
@@ -365,11 +366,11 @@ input {
   color: #1b1d1f;
 }
 
-.fas {
+.FAicon {
   transition: all 0.2s ease-in-out;
 }
-.fas:hover {
-  transform: scale(1.5);
+.FAicon:hover {
+  transform: scale(1.3);
   cursor: pointer;
 }
 #introText {
