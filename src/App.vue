@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p id="introText">hello</p>
+    <p id="introText">To get started, use the + at the bottom of the screen.</p>
     <div id="btnContainer">
       <button class="fas fa-plus" id="newBookmarkBtn"></button>
     </div>
@@ -375,7 +375,6 @@ input {
   cursor: pointer;
 }
 #introText {
-  border: 2px solid red;
   position: absolute;
   visibility: hidden;
 }
