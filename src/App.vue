@@ -65,7 +65,20 @@ console.log("script loaded");
 
 //js here
 window.onload = () => {
-  setOutputBoxColour(); //set default colours
+  setOutputBoxColour(); //set default colours of modal test output
+
+  //create empty array if it doesnt already exist
+  if (localStorage.getItem("tiles") == null) {
+    localStorage.setItem("tiles", JSON.stringify([]));
+  }
+
+  //if array is empty, diplay welcome message
+  if (JSON.parse(localStorage.getItem("tiles")).length == 0) {
+    console.log('empty boi');
+    document.getElementById('introText').style.visibility = 'visible'
+  } else {
+    console.log('not empty');
+  }
 
   //trigger colour chamge on key press:
   document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
@@ -105,11 +118,6 @@ function AddBookmark() {
   }
 
   let dataArray = [nameCapitalized, link, colour1, colour2];
-
-  //create empty array if it doesnt already exist
-  if (localStorage.getItem("tiles") == null) {
-    localStorage.setItem("tiles", JSON.stringify([]));
-  }
 
   let tilesArrayDecoded = JSON.parse(localStorage.getItem("tiles"));
   tilesArrayDecoded.push(dataArray);
@@ -366,8 +374,9 @@ input {
   transform: scale(1.5);
   cursor: pointer;
 }
-#introText{
+#introText {
   border: 2px solid red;
   position: absolute;
+  visibility: hidden;
 }
 </style>
