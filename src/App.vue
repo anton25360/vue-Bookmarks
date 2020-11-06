@@ -25,7 +25,7 @@
     <div id="modalBackground">
       <div id="modalContent">
         <div id="inputForm">
-          <p class="inputTitle">TITLE</p>
+          <p class="inputTitle">NAME</p>
           <input type="text" id="inputName" placeholder="Name" /><br />
           <input type="text" id="inputLink" placeholder="URL" /><br />
           <p class="inputTitle">COLOURS</p>
@@ -46,7 +46,7 @@
             id="inputColour2"
             placeholder="eg: blue"
           />
-          <p class="inputTitle">OUTPUT</p>
+          <p class="inputTitle">TILE</p>
           <div id="boxColourOutput">
             <p id="boxInitial"></p>
           </div>
@@ -377,5 +377,6 @@ input {
 #introText {
   position: absolute;
   visibility: hidden;
+  font-size: 20px;
 }
 </style>
