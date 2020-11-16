@@ -106,7 +106,7 @@ window.onload = () => {
   document.getElementById("modalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
   document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
   document.getElementById("deleteModalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
-  document.getElementById("deleteModalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
+  document.getElementById("deleteModalDoneBtn").onclick = DeleteBookmark; //add bookmark to DB and run closeModal (closes modal)
 };
 
 //new tile modal
@@ -156,6 +156,10 @@ function AddBookmark() {
 
   closeModal();
   location.reload();
+}
+
+function DeleteBookmark() {
+  alert("bookmark removed");
 }
 
 function setOutputBoxColour() {
@@ -296,6 +300,10 @@ export default {
   border-radius: 3px;
   padding: 5px 10px;
   margin: 10px;
+}
+
+#deleteModalDoneBtn {
+  background-color: rgb(238, 64, 98);
 }
 
 #modalDoneBtn,
