@@ -59,11 +59,11 @@
     </div>
 
     <div id="deleteModalBackground">
-      <div id="deleteModalContent"><p>yooyoyoyoyy</p>
+      <div id="deleteModalContent">
+        <p>yooyoyoyoyy</p>
 
-            <button id="deleteModalCancelBtn">cancel</button>
-      <button id="deleteModalDoneBtn">Done</button>
-      
+        <button id="deleteModalCancelBtn">cancel</button>
+        <button id="deleteModalDoneBtn">Delete</button>
       </div>
     </div>
   </div>
@@ -102,8 +102,11 @@ window.onload = () => {
 
   document.getElementById("deleteBtn").onclick = openDeleteModal; //opens delete modal
   document.getElementById("newBookmarkBtn").onclick = openModal; //run createNewBookmark (opens modal)
+
   document.getElementById("modalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
   document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
+  document.getElementById("deleteModalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
+  document.getElementById("deleteModalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
 };
 
 //new tile modal
@@ -114,6 +117,7 @@ function openModal() {
 
 function closeModal() {
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal on close
+  document.getElementById("deleteModalBackground").style.visibility = "hidden"; //hide modal on close
 }
 
 //dlete modal
@@ -268,7 +272,8 @@ export default {
   display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#modalCancelBtn {
+#modalCancelBtn,
+#deleteModalCancelBtn {
   float: left;
   font-family: "product";
   font-size: 17px;
@@ -279,7 +284,8 @@ export default {
   padding: 5px 10px;
   margin: 10px;
 }
-#modalDoneBtn {
+#modalDoneBtn,
+#deleteModalDoneBtn {
   float: right;
   font-family: "product";
   /* font-weight: bold; */
@@ -293,6 +299,8 @@ export default {
 }
 
 #modalDoneBtn,
+#deleteModalCancelBtn,
+#deleteModalDoneBtn,
 #modalCancelBtn:hover {
   cursor: pointer;
 }
