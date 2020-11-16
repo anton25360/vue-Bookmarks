@@ -2,7 +2,7 @@
   <div id="app">
     <p id="introText">To get started, use the + at the bottom of the screen.</p>
     <div id="btnContainer">
-      <button class="FAicon far fa-trash-alt" id="newBookmarkBtn"></button>
+      <button class="FAicon far fa-trash-alt" id="deleteBtn"></button>
       <button class="FAicon fas fa-plus" id="newBookmarkBtn"></button>
     </div>
 
@@ -57,6 +57,15 @@
         <button id="modalDoneBtn">Done</button>
       </div>
     </div>
+
+    <div id="deleteModalBackground">
+      <div id="deleteModalContent"><p>yooyoyoyoyy</p>
+
+            <button id="deleteModalCancelBtn">cancel</button>
+      <button id="deleteModalDoneBtn">Done</button>
+      
+      </div>
+    </div>
   </div>
 </template>
 
@@ -89,12 +98,15 @@ window.onload = () => {
   document.getElementById("inputName").onkeyup = setInitialLetter;
 
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
+  document.getElementById("deleteModalBackground").style.visibility = "hidden"; //hide delete modal by default
 
+  document.getElementById("deleteBtn").onclick = openDeleteModal; //opens delete modal
   document.getElementById("newBookmarkBtn").onclick = openModal; //run createNewBookmark (opens modal)
   document.getElementById("modalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
   document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
 };
 
+//new tile modal
 function openModal() {
   console.log("creating new bookmark...");
   document.getElementById("modalBackground").style.visibility = "visible";
@@ -103,6 +115,16 @@ function openModal() {
 function closeModal() {
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal on close
 }
+
+//dlete modal
+function openDeleteModal() {
+  console.log("creating new bookmark...");
+  document.getElementById("deleteModalBackground").style.visibility = "visible";
+}
+
+// function closeDeleteModal() {
+//   document.getElementById("deleteModalBackground").style.visibility = "hidden"; //hide modal on close
+// }
 
 function AddBookmark() {
   let name = document.getElementById("inputName").value;
@@ -222,7 +244,8 @@ export default {
   cursor: pointer;
 }
 
-#modalBackground {
+#modalBackground,
+#deleteModalBackground {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -238,7 +261,8 @@ export default {
   justify-content: center;
   align-items: center;
 }
-#modalContent {
+#modalContent,
+#deleteModalContent {
   background-color: white;
   border-radius: 4px;
   display: inline-block;
