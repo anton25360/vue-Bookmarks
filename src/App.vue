@@ -81,7 +81,7 @@
 </template>
 
 <script>
-submit// var testArray = ["one", "two", "three"];
+// var testArray = ["one", "two", "three"];
 
 //js here
 window.onload = () => {
