@@ -60,7 +60,14 @@
 
     <div id="deleteModalBackground">
       <div id="deleteModalContent">
-        <p>yooyoyoyoyy</p>
+        <div id="deleteTilesSelectionContainer">
+          <select name="tilesSelection" id="deleteTilesSelection">
+            <option value="volvo">Netflix (netflix.fr)</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+        </div>
 
         <button id="deleteModalCancelBtn">cancel</button>
         <button id="deleteModalDoneBtn">Delete</button>
@@ -159,7 +166,12 @@ function AddBookmark() {
 }
 
 function DeleteBookmark() {
-  alert("bookmark removed");
+
+  var element = document.getElementById("deleteTilesSelection");
+  var chosenBookmark = element.options[element.selectedIndex].text;
+
+  alert("bookmark removed" + chosenBookmark);
+  // var strUser = e.options[e.selectedIndex].text;
 }
 
 function setOutputBoxColour() {
@@ -314,6 +326,20 @@ export default {
 #deleteModalDoneBtn,
 #modalCancelBtn:hover {
   cursor: pointer;
+}
+
+#deleteTilesSelectionContainer {
+  border: 2px solid blue;
+}
+
+#deleteTilesSelection {
+  border: 2px solid red;
+  margin: 20px;
+  font-size: 18px;
+}
+
+option {
+  font-family: "product";
 }
 
 input {
