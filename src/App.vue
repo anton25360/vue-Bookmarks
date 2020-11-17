@@ -92,9 +92,11 @@ window.onload = () => {
     localStorage.setItem("tiles", JSON.stringify([]));
   }
 
-  //if array is empty, diplay welcome message
+  //if array is empty, diplay welcome message + hide delete button
   if (JSON.parse(localStorage.getItem("tiles")).length == 0) {
     document.getElementById("introText").style.visibility = "visible";
+    document.getElementById("deleteBtn").style.visibility = "hidden";
+
   }
 
   //trigger colour chamge on key press:
@@ -130,10 +132,6 @@ function closeModal() {
 function openDeleteModal() {
   document.getElementById("deleteModalBackground").style.visibility = "visible";
 }
-
-// function closeDeleteModal() {
-//   document.getElementById("deleteModalBackground").style.visibility = "hidden"; //hide modal on close
-// }
 
 function AddBookmark() {
   let name = document.getElementById("inputName").value;
