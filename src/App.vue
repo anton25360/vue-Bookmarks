@@ -329,12 +329,7 @@ export default {
   cursor: pointer;
 }
 
-#deleteTilesSelectionContainer {
-  border: 2px solid blue;
-}
-
 #deleteTilesSelection {
-  border: 2px solid red;
   margin: 20px;
   font-size: 18px;
 }
