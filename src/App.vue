@@ -81,8 +81,7 @@
 </template>
 
 <script>
-// var testArray = ["one", "two", "three"];
-console.log("script loaded");
+submit// var testArray = ["one", "two", "three"];
 
 //js here
 window.onload = () => {
@@ -129,7 +128,6 @@ function closeModal() {
 
 //dlete modal
 function openDeleteModal() {
-  console.log("creating new bookmark...");
   document.getElementById("deleteModalBackground").style.visibility = "visible";
 }
 
@@ -161,20 +159,30 @@ function AddBookmark() {
   document.getElementById("inputName").value = "";
   document.getElementById("inputLink").value = "";
 
-  closeModal();
+  // closeModal();
   location.reload();
 }
 
 function DeleteBookmark() {
+  //gets selected value of drop down
   var element = document.getElementById("deleteTilesSelection");
   var chosenBookmark = element.options[element.selectedIndex].text;
 
-  alert("bookmark removed" + chosenBookmark);
-  let tiles = localStorage.getItem("tiles")
-  alert(tiles)
+  let tilesArrayDecoded = JSON.parse(localStorage.getItem("tiles")); //gets the tiles array from storage
 
-  
-  closeModal();
+  tilesArrayDecoded.forEach((element) => {
+    //if chosen value from drop down exists
+    if (element.includes(chosenBookmark)) {
+      const index = tilesArrayDecoded.indexOf(element); //get index of element
+      tilesArrayDecoded.splice(index, 1); //remove tile from array using index
+      console.log("removed " + chosenBookmark);
+    }
+  });
+
+  localStorage.setItem("tiles", JSON.stringify(tilesArrayDecoded)); //reset local tiles array
+  // closeModal();
+  location.reload();
+
 }
 
 function setOutputBoxColour() {
@@ -331,7 +339,7 @@ export default {
   cursor: pointer;
 }
 
-#deleteTilesSelectionContainer{
+#deleteTilesSelectionContainer {
   text-align: center;
 }
 
