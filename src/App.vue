@@ -331,6 +331,10 @@ export default {
   cursor: pointer;
 }
 
+#deleteTilesSelectionContainer{
+  text-align: center;
+}
+
 #deleteTilesSelection {
   margin: 20px;
   font-size: 18px;
