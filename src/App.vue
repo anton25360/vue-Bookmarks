@@ -159,7 +159,6 @@ function AddBookmark() {
   document.getElementById("inputName").value = "";
   document.getElementById("inputLink").value = "";
 
-  // closeModal();
   location.reload();
 }
 
@@ -180,9 +179,7 @@ function DeleteBookmark() {
   });
 
   localStorage.setItem("tiles", JSON.stringify(tilesArrayDecoded)); //reset local tiles array
-  // closeModal();
   location.reload();
-
 }
 
 function setOutputBoxColour() {
@@ -204,14 +201,15 @@ export default {
   name: "App",
   data() {
     return {
-      // items: ["hello", "vue", "js"],
-      // fruits: ["apple", "pear", "bannana"],
       tiles: JSON.parse(localStorage.getItem("tiles")),
-      // shoppingItems: [
-      //   {name: 'apple', price: '10'},
-      //   {name: 'orange', price: '12'}
-      // ]
     };
+  },
+  methods: {
+    methodThatForcesUpdate() {
+      // ...
+      this.$forceUpdate(); // Notice we have to use a $ here
+      // ...
+    },
   },
 };
 </script>
