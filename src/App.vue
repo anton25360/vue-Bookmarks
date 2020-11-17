@@ -172,6 +172,8 @@ function DeleteBookmark() {
 
   alert("bookmark removed" + chosenBookmark);
   // var strUser = e.options[e.selectedIndex].text;
+    closeModal();
+
 }
 
 function setOutputBoxColour() {
