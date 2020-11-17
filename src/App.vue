@@ -95,10 +95,7 @@ window.onload = () => {
 
   //if array is empty, diplay welcome message
   if (JSON.parse(localStorage.getItem("tiles")).length == 0) {
-    console.log("empty boi");
     document.getElementById("introText").style.visibility = "visible";
-  } else {
-    console.log("not empty");
   }
 
   //trigger colour chamge on key press:
@@ -122,7 +119,6 @@ window.onload = () => {
 
 //new tile modal
 function openModal() {
-  console.log("creating new bookmark...");
   document.getElementById("modalBackground").style.visibility = "visible";
 }
 
@@ -174,6 +170,10 @@ function DeleteBookmark() {
   var chosenBookmark = element.options[element.selectedIndex].text;
 
   alert("bookmark removed" + chosenBookmark);
+  let tiles = localStorage.getItem("tiles")
+  alert(tiles)
+
+  
   closeModal();
 }
 
@@ -196,8 +196,8 @@ export default {
   name: "App",
   data() {
     return {
-      items: ["hello", "vue", "js"],
-      fruits: ["apple", "pear", "bannana"],
+      // items: ["hello", "vue", "js"],
+      // fruits: ["apple", "pear", "bannana"],
       tiles: JSON.parse(localStorage.getItem("tiles")),
       // shoppingItems: [
       //   {name: 'apple', price: '10'},
