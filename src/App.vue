@@ -60,6 +60,8 @@
 
     <div id="deleteModalBackground">
       <div id="deleteModalContent">
+        <p class="inputTitle">DELETE</p>
+
         <div id="deleteTilesSelectionContainer">
           <select name="tilesSelection" id="deleteTilesSelection">
             <option v-for="item in tiles" v-bind:key="item">{{
