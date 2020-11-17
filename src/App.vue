@@ -288,6 +288,9 @@ export default {
   padding: 5px 10px;
   margin: 10px;
 }
+#deleteModalCancelBtn {
+  color: rgb(32, 32, 32);
+}
 #modalDoneBtn,
 #deleteModalDoneBtn {
   float: right;
