@@ -62,10 +62,12 @@
       <div id="deleteModalContent">
         <div id="deleteTilesSelectionContainer">
           <select name="tilesSelection" id="deleteTilesSelection">
-            <option value="volvo">Netflix (netflix.fr)</option>
-            <option value="saab">Saab</option>
+            <option v-for="item in tiles" v-bind:key="item">{{
+              item[0]
+            }}</option>
+            <!-- <option value="saab">Saab</option>
             <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+            <option value="audi">Audi</option> -->
           </select>
         </div>
 
@@ -166,14 +168,11 @@ function AddBookmark() {
 }
 
 function DeleteBookmark() {
-
   var element = document.getElementById("deleteTilesSelection");
   var chosenBookmark = element.options[element.selectedIndex].text;
 
   alert("bookmark removed" + chosenBookmark);
-  // var strUser = e.options[e.selectedIndex].text;
-    closeModal();
-
+  closeModal();
 }
 
 function setOutputBoxColour() {
