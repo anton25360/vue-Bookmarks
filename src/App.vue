@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <p id="introText">To get started, use the + at the bottom of the screen.</p>
+    <div id="introText">To get started, use the <div class="fas fa-ellipsis-v"/> at the top of the screen.</div>
 
     <div id="tileGrid">
       <a
@@ -406,6 +406,10 @@ input {
   position: absolute;
   visibility: hidden;
   font-size: 20px;
+}
+
+#introText div{
+  font-size: 16px;
 }
 #menuBtn {
   font-size: 22px;
