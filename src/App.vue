@@ -201,14 +201,7 @@ export default {
     return {
       tiles: JSON.parse(localStorage.getItem("tiles")),
     };
-  },
-  methods: {
-    methodThatForcesUpdate() {
-      // ...
-      this.$forceUpdate(); // Notice we have to use a $ here
-      // ...
-    },
-  },
+  }
 };
 </script>
 
@@ -217,7 +210,7 @@ export default {
   font-family: "product";
   font-style: normal;
   font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"),
+  src: local("Open Sans"), local("OpenSans"),p
     url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
       format("woff2");
 }
