@@ -2,9 +2,9 @@
   <div id="app">
     <button class="FAicon fas fa-ellipsis-v" id="menuBtn"></button>
     <div id="menuContainer">
-      <p><button class="FAicon fas fa-plus"/> New tile</p>
-      <p><button class="FAicon far fa-trash-alt"/> Delete tile</p>
-      <p><button class="FAicon fas fa-wrench"/> Settings</p>
+      <div class="menuItem"><button class="FAicon fas fa-plus"></button> New tile</div>
+      <div class="menuItem"><button class="FAicon far fa-trash-alt"/> Delete tile</div>
+      <div class="menuItem"><button class="FAicon fas fa-wrench"/> Settings</div>
     </div>
 
     <p id="introText">To get started, use the + at the bottom of the screen.</p>
@@ -434,11 +434,10 @@ input {
 }
 
 .FAicon {
-  /* font-size: 30px; */
   background-color: transparent;
   border: none;
-
-  /* color: #1b1d1f; */
+  margin: 0;
+  /* padding: 0; */
 }
 
 .FAicon {
@@ -446,7 +445,7 @@ input {
 }
 .FAicon:hover {
   /* transform: scale(1.3); */
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 #introText {
   position: absolute;
@@ -464,9 +463,23 @@ input {
 }
 #menuContainer {
   position: absolute;
-  top: 45px;
+  top: 40px;
   right: 0px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* padding: 5px; */
 
+
+}
+.menuItem{
+/* background-color: aquamarine; */
+  cursor: pointer;
+  padding: 10px;
+}
+.menuItem:hover{
+  background-color: rgb(233, 233, 233);
 }
 </style>
