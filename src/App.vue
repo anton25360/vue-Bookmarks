@@ -101,35 +101,21 @@ window.onload = () => {
   document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
   document.getElementById("inputColour2").onkeyup = setOutputBoxColour;
 
-  //trigger initial(letter) onPress
-  document.getElementById("inputName").onkeyup = setInitialLetter;
+  document.getElementById("inputName").onkeyup = setInitialLetter; //trigger initial(letter) onPress
 
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
   document.getElementById("deleteModalBackground").style.visibility = "hidden"; //hide delete modal by default
 
-  document.getElementById("menuDeleteTile").onclick = openDeleteModal; //opens delete modal
-  document.getElementById("menuNewTile").onclick = openModal; //run createNewBookmark (opens modal)
+  document.getElementById("menuDeleteTile").onclick = ()=>   document.getElementById("deleteModalBackground").style.visibility = "visible"; //open Delete Tile modal
+  document.getElementById("menuNewTile").onclick = ()=>  document.getElementById("modalBackground").style.visibility = "visible"; //open New Tile modal
+  document.getElementById("menuBtn").onclick = () => document.getElementById("menuContainer").style.visibility = "visible"; //open Menu modal
+  document.getElementById("modalCancelBtn").onclick = ()=>document.getElementById("modalBackground").style.visibility = "hidden"; //close New Tile modal
+  document.getElementById("deleteModalCancelBtn").onclick = ()=>document.getElementById("deleteModalBackground").style.visibility = "hidden"; //close Delete Tile modal
 
-  document.getElementById("modalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
-  document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
-  document.getElementById("deleteModalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
-  document.getElementById("deleteModalDoneBtn").onclick = DeleteBookmark; //add bookmark to DB and run closeModal (closes modal)
+  document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB
+  document.getElementById("deleteModalDoneBtn").onclick = DeleteBookmark; //add bookmark to DB
+
 };
-
-//new tile modal
-function openModal() {
-  document.getElementById("modalBackground").style.visibility = "visible";
-}
-
-function closeModal() {
-  document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal on close
-  document.getElementById("deleteModalBackground").style.visibility = "hidden"; //hide modal on close
-}
-
-//dlete modal
-function openDeleteModal() {
-  document.getElementById("deleteModalBackground").style.visibility = "visible";
-}
 
 function AddBookmark() {
   let name = document.getElementById("inputName").value;
@@ -463,6 +449,7 @@ input {
   border-radius: 3px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* padding: 5px; */
+    visibility: hidden;
 
 
 }
