@@ -2,9 +2,9 @@
   <div id="app">
     <button class="FAicon fas fa-ellipsis-v" id="menuBtn"></button>
     <div id="menuContainer">
-      <div class="menuItem"><button class="FAicon fas fa-plus"></button> New tile</div>
-      <div class="menuItem"><button class="FAicon far fa-trash-alt"/> Delete tile</div>
-      <div class="menuItem"><button class="FAicon fas fa-wrench"/> Settings</div>
+      <div id="menuNewTile" class="menuItem"><button class="FAicon fas fa-plus"></button> New tile</div>
+      <div id="menuDeleteTile" class="menuItem"><button class="FAicon far fa-trash-alt"/> Delete tile</div>
+      <div id="menuSettings" class="menuItem"><button class="FAicon fas fa-wrench"/> Settings</div>
     </div>
 
     <p id="introText">To get started, use the + at the bottom of the screen.</p>
@@ -74,9 +74,6 @@
             <option v-for="item in tiles" v-bind:key="item">{{
               item[0]
             }}</option>
-            <!-- <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option> -->
           </select>
         </div>
 
@@ -88,7 +85,6 @@
 </template>
 
 <script>
-// var testArray = ["one", "two", "three"];
 
 //js here
 window.onload = () => {
@@ -102,7 +98,7 @@ window.onload = () => {
   //if array is empty, diplay welcome message + hide delete button
   if (JSON.parse(localStorage.getItem("tiles")).length == 0) {
     document.getElementById("introText").style.visibility = "visible";
-    document.getElementById("deleteBtn").style.visibility = "hidden";
+    document.getElementById("menuDeleteTile").style.display = "none";
   }
 
   //trigger colour chamge on key press:
@@ -115,8 +111,8 @@ window.onload = () => {
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
   document.getElementById("deleteModalBackground").style.visibility = "hidden"; //hide delete modal by default
 
-  document.getElementById("deleteBtn").onclick = openDeleteModal; //opens delete modal
-  document.getElementById("newBookmarkBtn").onclick = openModal; //run createNewBookmark (opens modal)
+  document.getElementById("menuDeleteTile").onclick = openDeleteModal; //opens delete modal
+  document.getElementById("menuNewTile").onclick = openModal; //run createNewBookmark (opens modal)
 
   document.getElementById("modalCancelBtn").onclick = closeModal; //add bookmark to DB and run closeModal (closes modal)
   document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB and run closeModal (closes modal)
