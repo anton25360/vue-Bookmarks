@@ -2,9 +2,15 @@
   <div id="app">
     <button class="FAicon fas fa-ellipsis-v" id="menuBtn"></button>
     <div id="menuContainer">
-      <div id="menuNewTile" class="menuItem"><button class="FAicon fas fa-plus"></button> New tile</div>
-      <div id="menuDeleteTile" class="menuItem"><button class="FAicon far fa-trash-alt"/> Delete tile</div>
-      <div id="menuSettings" class="menuItem"><button class="FAicon fas fa-wrench"/> Settings</div>
+      <div id="menuNewTile" class="menuItem">
+        <button class="FAicon fas fa-plus"></button> New tile
+      </div>
+      <div id="menuDeleteTile" class="menuItem">
+        <button class="FAicon far fa-trash-alt" /> Delete tile
+      </div>
+      <div id="menuSettings" class="menuItem">
+        <button class="FAicon fas fa-wrench" /> Settings
+      </div>
     </div>
 
     <p id="introText">To get started, use the + at the bottom of the screen.</p>
@@ -81,7 +87,6 @@
 </template>
 
 <script>
-
 //js here
 window.onload = () => {
   setOutputBoxColour(); //set default colours of modal test output
@@ -106,15 +111,21 @@ window.onload = () => {
   document.getElementById("modalBackground").style.visibility = "hidden"; //hide modal by default
   document.getElementById("deleteModalBackground").style.visibility = "hidden"; //hide delete modal by default
 
-  document.getElementById("menuDeleteTile").onclick = ()=>   document.getElementById("deleteModalBackground").style.visibility = "visible"; //open Delete Tile modal
-  document.getElementById("menuNewTile").onclick = ()=>  document.getElementById("modalBackground").style.visibility = "visible"; //open New Tile modal
-  document.getElementById("menuBtn").onclick = () => document.getElementById("menuContainer").style.visibility = "visible"; //open Menu modal
-  document.getElementById("modalCancelBtn").onclick = ()=>document.getElementById("modalBackground").style.visibility = "hidden"; //close New Tile modal
-  document.getElementById("deleteModalCancelBtn").onclick = ()=>document.getElementById("deleteModalBackground").style.visibility = "hidden"; //close Delete Tile modal
+  document.getElementById("menuDeleteTile").onclick = () =>
+    (document.getElementById("deleteModalBackground").style.visibility =
+      "visible"); //open Delete Tile modal
+  document.getElementById("menuNewTile").onclick = () =>
+    (document.getElementById("modalBackground").style.visibility = "visible"); //open New Tile modal
+  document.getElementById("menuBtn").onclick = () =>
+    (document.getElementById("menuContainer").style.visibility = "visible"); //open Menu modal
+  document.getElementById("modalCancelBtn").onclick = () =>
+    (document.getElementById("modalBackground").style.visibility = "hidden"); //close New Tile modal
+  document.getElementById("deleteModalCancelBtn").onclick = () =>
+    (document.getElementById("deleteModalBackground").style.visibility =
+      "hidden"); //close Delete Tile modal
 
   document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB
   document.getElementById("deleteModalDoneBtn").onclick = DeleteBookmark; //add bookmark to DB
-
 };
 
 function AddBookmark() {
@@ -202,13 +213,10 @@ export default {
 
 #app {
   font-family: "product";
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* background-color: aqua; */
 
   background: linear-gradient(-45deg, #d3cce3, #e5ebff, #bcd4e7, #e2e2e2);
   background-size: 400% 400%;
@@ -224,29 +232,6 @@ export default {
   100% {
     background-position: 0% 50%;
   }
-}
-
-.navBar {
-  background-color: #2c3e50;
-}
-
-#navTitle {
-  color: white;
-  float: left;
-  font-size: 20px;
-  margin-left: 20px;
-}
-
-#navBtn {
-  float: right;
-  background-color: white;
-  color: #2c3e50;
-  padding: 5px 10px;
-  border-radius: 3px;
-  margin-right: 20px;
-}
-#navBtn:hover {
-  cursor: pointer;
 }
 
 #modalBackground,
@@ -414,17 +399,8 @@ input {
 .FAicon {
   background-color: transparent;
   border: none;
-  margin: 0;
-  /* padding: 0; */
 }
 
-.FAicon {
-  /* transition: all 0.2s ease-in-out; */
-}
-.FAicon:hover {
-  /* transform: scale(1.3); */
-  /* cursor: pointer; */
-}
 #introText {
   position: absolute;
   visibility: hidden;
@@ -443,22 +419,17 @@ input {
   position: absolute;
   top: 40px;
   right: 0px;
-  /* border: 2px solid red; */
   margin-right: 10px;
   background-color: white;
   border-radius: 3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* padding: 5px; */
-    visibility: hidden;
-
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  visibility: hidden;
 }
-.menuItem{
-/* background-color: aquamarine; */
+.menuItem {
   cursor: pointer;
   padding: 10px;
 }
-.menuItem:hover{
+.menuItem:hover {
   background-color: rgb(233, 233, 233);
 }
 </style>
