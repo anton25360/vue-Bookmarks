@@ -13,7 +13,11 @@
       </div>
     </div>
 
-    <div id="introText">To get started, use the <div class="fas fa-ellipsis-v"/> at the top of the screen.</div>
+    <div id="introText">
+      To get started, use the
+      <div class="fas fa-ellipsis-v" />
+      at the top of the screen.
+    </div>
 
     <div id="tileGrid">
       <a
@@ -102,6 +106,7 @@ window.onload = () => {
     document.getElementById("menuDeleteTile").style.display = "none";
   }
 
+
   //trigger colour chamge on key press:
   document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
   document.getElementById("inputColour2").onkeyup = setOutputBoxColour;
@@ -126,6 +131,11 @@ window.onload = () => {
 
   document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB
   document.getElementById("deleteModalDoneBtn").onclick = DeleteBookmark; //add bookmark to DB
+
+  // let menuIsVisible = false
+
+
+
 };
 
 function AddBookmark() {
@@ -408,7 +418,7 @@ input {
   font-size: 20px;
 }
 
-#introText div{
+#introText div {
   font-size: 16px;
 }
 #menuBtn {
@@ -418,6 +428,8 @@ input {
   right: 0px;
   margin: 10px;
   outline: none;
+    cursor: pointer;
+
 }
 #menuContainer {
   position: absolute;
@@ -428,6 +440,7 @@ input {
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   visibility: hidden;
+  
 }
 .menuItem {
   cursor: pointer;
