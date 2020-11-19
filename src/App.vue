@@ -106,6 +106,7 @@ window.onload = () => {
     document.getElementById("menuDeleteTile").style.display = "none";
   }
 
+let menuIsVisible = true
 
   //trigger colour chamge on key press:
   document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
@@ -121,19 +122,24 @@ window.onload = () => {
       "visible"); //open Delete Tile modal
   document.getElementById("menuNewTile").onclick = () =>
     (document.getElementById("modalBackground").style.visibility = "visible"); //open New Tile modal
-  document.getElementById("menuBtn").onclick = () =>
-    (document.getElementById("menuContainer").style.visibility = "visible"); //open Menu modal
   document.getElementById("modalCancelBtn").onclick = () =>
     (document.getElementById("modalBackground").style.visibility = "hidden"); //close New Tile modal
   document.getElementById("deleteModalCancelBtn").onclick = () =>
     (document.getElementById("deleteModalBackground").style.visibility =
       "hidden"); //close Delete Tile modal
+  document.getElementById("menuBtn").onclick =()=> toggleMenuVisibility(menuIsVisible) //open Menu modal
 
   document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB
   document.getElementById("deleteModalDoneBtn").onclick = DeleteBookmark; //add bookmark to DB
 
-  // let menuIsVisible = false
-
+function toggleMenuVisibility(boolean) {
+  if (boolean) {
+    document.getElementById("menuContainer").style.visibility = "visible"
+  } else {
+        document.getElementById("menuContainer").style.visibility = "hidden"
+  }
+  menuIsVisible = !menuIsVisible
+}
 
 
 };
