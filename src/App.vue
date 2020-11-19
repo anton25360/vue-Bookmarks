@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <button class="FAicon fas fa-ellipsis-v" id="menuBtn"></button>
+    <div id="menuContainer">
+      <p><button class="FAicon fas fa-plus"/> New tile</p>
+      <p><button class="FAicon far fa-trash-alt"/> Delete tile</p>
+      <p><button class="FAicon fas fa-wrench"/> Settings</p>
+    </div>
+
     <p id="introText">To get started, use the + at the bottom of the screen.</p>
     <div id="btnContainer">
       <button class="FAicon far fa-trash-alt" id="deleteBtn"></button>
@@ -96,7 +103,6 @@ window.onload = () => {
   if (JSON.parse(localStorage.getItem("tiles")).length == 0) {
     document.getElementById("introText").style.visibility = "visible";
     document.getElementById("deleteBtn").style.visibility = "hidden";
-
   }
 
   //trigger colour chamge on key press:
@@ -201,7 +207,7 @@ export default {
     return {
       tiles: JSON.parse(localStorage.getItem("tiles")),
     };
-  }
+  },
 };
 </script>
 
@@ -210,8 +216,9 @@ export default {
   font-family: "product";
   font-style: normal;
   font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"),p
-    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+  src: local("Open Sans"), local("OpenSans"),
+    p
+      url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
       format("woff2");
 }
 
@@ -427,23 +434,39 @@ input {
 }
 
 .FAicon {
-  font-size: 30px;
+  /* font-size: 30px; */
   background-color: transparent;
   border: none;
 
-  color: #1b1d1f;
+  /* color: #1b1d1f; */
 }
 
 .FAicon {
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
 }
 .FAicon:hover {
-  transform: scale(1.3);
+  /* transform: scale(1.3); */
   cursor: pointer;
 }
 #introText {
   position: absolute;
   visibility: hidden;
   font-size: 20px;
+}
+#menuBtn {
+  /* color: red; */
+  font-size: 22px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 10px;
+  outline: none;
+}
+#menuContainer {
+  position: absolute;
+  top: 45px;
+  right: 0px;
+  border: 2px solid red;
+
 }
 </style>
