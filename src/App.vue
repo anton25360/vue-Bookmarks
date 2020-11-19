@@ -8,10 +8,6 @@
     </div>
 
     <p id="introText">To get started, use the + at the bottom of the screen.</p>
-    <div id="btnContainer">
-      <button class="FAicon far fa-trash-alt" id="deleteBtn"></button>
-      <button class="FAicon fas fa-plus" id="newBookmarkBtn"></button>
-    </div>
 
     <div id="tileGrid">
       <a
