@@ -121,7 +121,8 @@ let menuIsVisible = true
     (document.getElementById("deleteModalBackground").style.visibility =
       "visible"); //open Delete Tile modal
   document.getElementById("menuNewTile").onclick = () =>
-    (document.getElementById("modalBackground").style.visibility = "visible"); //open New Tile modal
+    (document.getElementById("modalBackground").style.visibility = "visible",
+    document.getElementById("menuContainer").style.visibility = "hidden"); //open New Tile modal
   document.getElementById("modalCancelBtn").onclick = () =>
     (document.getElementById("modalBackground").style.visibility = "hidden"); //close New Tile modal
   document.getElementById("deleteModalCancelBtn").onclick = () =>
