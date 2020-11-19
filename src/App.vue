@@ -399,6 +399,7 @@ input {
 .FAicon {
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 #introText {
@@ -407,7 +408,6 @@ input {
   font-size: 20px;
 }
 #menuBtn {
-  /* color: red; */
   font-size: 22px;
   position: absolute;
   top: 0px;
