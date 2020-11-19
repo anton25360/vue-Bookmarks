@@ -39,13 +39,13 @@
     <div id="modalBackground">
       <div id="modalContent">
         <div id="inputForm">
-          <p class="inputTitle">NAME</p>
+          <p class="inputTitle">Name</p>
           <input type="text" id="inputName" placeholder="Name" /><br />
           <input type="text" id="inputLink" placeholder="URL" /><br />
-          <p class="inputTitle">COLOURS</p>
+          <p class="inputTitle">Colours</p>
           <p style="text-align: center">
             you can use words or hex codes.<br />Click
-            <a id="uigLink" href="https://uigradients.com/">here</a> for
+            <a id="uigLink" target="_blank" href="https://uigradients.com/">here</a> for
             inspiration.
           </p>
           <input
@@ -60,7 +60,7 @@
             id="inputColour2"
             placeholder="eg: blue"
           />
-          <p class="inputTitle">TILE</p>
+          <p class="inputTitle">Preview</p>
           <div id="boxColourOutput">
             <p id="boxInitial"></p>
           </div>
@@ -73,7 +73,7 @@
 
     <div id="deleteModalBackground">
       <div id="deleteModalContent">
-        <p class="inputTitle">DELETE</p>
+        <p class="inputTitle">Delete Tile</p>
 
         <div id="deleteTilesSelectionContainer">
           <select name="tilesSelection" id="deleteTilesSelection">
