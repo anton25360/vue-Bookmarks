@@ -45,8 +45,10 @@
           <p class="inputTitle">Colours</p>
           <p style="text-align: center">
             you can use words or hex codes.<br />Click
-            <a id="uigLink" target="_blank" href="https://uigradients.com/">here</a> for
-            inspiration.
+            <a id="uigLink" target="_blank" href="https://uigradients.com/"
+              >here</a
+            >
+            for inspiration.
           </p>
           <input
             value="red"
@@ -106,7 +108,7 @@ window.onload = () => {
     document.getElementById("menuDeleteTile").style.display = "none";
   }
 
-let menuIsVisible = true
+  let menuIsVisible = true;
 
   //trigger colour chamge on key press:
   document.getElementById("inputColour1").onkeyup = setOutputBoxColour;
@@ -120,32 +122,33 @@ let menuIsVisible = true
   document.getElementById("menuDeleteTile").onclick = () =>
     (document.getElementById("deleteModalBackground").style.visibility =
       "visible"); //open Delete Tile modal
-  document.getElementById("menuNewTile").onclick = () =>
-    (document.getElementById("modalBackground").style.visibility = "visible",
-    document.getElementById("menuContainer").style.visibility = "hidden"); //open New Tile modal
+  document.getElementById("menuNewTile").onclick = () => (
+    (document.getElementById("modalBackground").style.visibility = "visible"),
+    (document.getElementById("menuContainer").style.visibility = "hidden")
+  ); //open New Tile modal
   document.getElementById("modalCancelBtn").onclick = () =>
     (document.getElementById("modalBackground").style.visibility = "hidden"); //close New Tile modal
   document.getElementById("deleteModalCancelBtn").onclick = () =>
     (document.getElementById("deleteModalBackground").style.visibility =
       "hidden"); //close Delete Tile modal
-  document.getElementById("menuBtn").onclick =()=> toggleMenuVisibility(menuIsVisible) //open Menu modal
+  document.getElementById("menuBtn").onclick = () =>
+    toggleMenuVisibility(menuIsVisible); //open Menu modal
 
-  document.getElementById("modalDoneBtn").onclick = AddBookmark; //add bookmark to DB
-  document.getElementById("deleteModalDoneBtn").onclick = DeleteBookmark; //add bookmark to DB
+  document.getElementById("modalDoneBtn").onclick = VerifyModalInputs; //verifies inputs + adds bookmark to DB
+  document.getElementById("deleteModalDoneBtn").onclick = DeleteBookmark; //remove bookmark from DB
 
-function toggleMenuVisibility(boolean) {
-  if (boolean) {
-    document.getElementById("menuContainer").style.visibility = "visible"
-  } else {
-        document.getElementById("menuContainer").style.visibility = "hidden"
+  function toggleMenuVisibility(boolean) {
+    if (boolean) {
+      document.getElementById("menuContainer").style.visibility = "visible";
+    } else {
+      document.getElementById("menuContainer").style.visibility = "hidden";
+    }
+    menuIsVisible = !menuIsVisible;
   }
-  menuIsVisible = !menuIsVisible
-}
-
-
 };
 
 function AddBookmark() {
+  //get relevant data
   let name = document.getElementById("inputName").value;
   let link = document.getElementById("inputLink").value;
   let colour1 = document.getElementById("inputColour1").value;
@@ -207,6 +210,22 @@ function setInitialLetter() {
   document.getElementById("boxInitial").innerText = initial;
 }
 
+function VerifyModalInputs() {
+  console.log("yeet");
+  let nameField = document.getElementById("inputName");
+  let linkField = document.getElementById("inputLink");
+
+  if (nameField.value.length == 0) {
+    nameField.style.border = "2px solid red";
+    linkField.style.removeProperty("border");
+  } else if (linkField.value.length == 0) {
+    linkField.style.border = "2px solid red";
+    nameField.style.removeProperty("border");
+  } else {
+    AddBookmark();
+  }
+}
+
 export default {
   name: "App",
   data() {
@@ -223,8 +242,7 @@ export default {
   font-style: normal;
   font-weight: 400;
   src: local("Open Sans"), local("OpenSans"),
-    
-      url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
       format("woff2");
 }
 
@@ -436,8 +454,7 @@ input {
   right: 0px;
   margin: 10px;
   outline: none;
-    cursor: pointer;
-
+  cursor: pointer;
 }
 #menuContainer {
   position: absolute;
@@ -448,7 +465,6 @@ input {
   border-radius: 3px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   visibility: hidden;
-  
 }
 .menuItem {
   cursor: pointer;
