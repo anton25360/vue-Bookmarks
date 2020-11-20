@@ -311,8 +311,9 @@ export default {
 #modalDoneBtn,
 #deleteModalCancelBtn,
 #deleteModalDoneBtn,
-#modalCancelBtn:hover {
+#modalCancelBtn {
   cursor: pointer;
+  outline: none;
 }
 
 #deleteTilesSelectionContainer {
