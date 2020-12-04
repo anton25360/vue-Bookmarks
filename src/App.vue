@@ -8,9 +8,9 @@
       <div id="menuDeleteTile" class="menuItem">
         <button class="FAicon far fa-trash-alt" /> Delete tile
       </div>
-      <div id="menuSettings" class="menuItem">
+      <!-- <div id="menuSettings" class="menuItem">
         <button class="FAicon fas fa-wrench" /> Settings
-      </div>
+      </div> -->
     </div>
 
     <div id="introText">
@@ -211,7 +211,6 @@ function setInitialLetter() {
 }
 
 function VerifyModalInputs() {
-  console.log("yeet");
   let nameField = document.getElementById("inputName");
   let linkField = document.getElementById("inputLink");
 
