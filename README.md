@@ -1,3 +1,3 @@
-# WatchOn
+# Bookmarks
 
-A web launcher for various streaming services.
+A bookmarks launcher.
